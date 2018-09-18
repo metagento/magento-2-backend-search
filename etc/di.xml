@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Backend\Controller\Adminhtml\Index\GlobalSearch">
+        <arguments>
+            <argument name="searchModules" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Metagento\BackendSearch\Model\Search\Config</item>
+                    <item name="acl" xsi:type="string">Magento_Config::config</item>
+                </item>
+                <item name="menu" xsi:type="array">
+                    <item name="class" xsi:type="string">Metagento\BackendSearch\Model\Search\Menu</item>
+                    <item name="acl" xsi:type="string">Magento_Config::config</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
